@@ -3,6 +3,6 @@ timeout 1
 start  chrome.exe "%temp%\book.pdf"
 timeout 5
 taskkill /IM chrome.exe -F
-del "%temp%\hide.bat"
+del "%temp%\hide.vbs"
 del "%temp%\main.bat"
 exit
