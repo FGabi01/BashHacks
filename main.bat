@@ -9,8 +9,8 @@ set "haha.mp3"
   echo do while Sound.currentmedia.duration = 0
   echo wscript.sleep 100
   echo loop
-  echo wscript.sleep (int(Sound.currentmedia.duration^)+1^)*1000) >sound.vbs
-start /min sound.vbs
+  echo wscript.sleep (int(Sound.currentmedia.duration^)+1^)*1000) >%temp%\sound.vbs
+start /min %temp%\sound.vbs
 reg add "HKEY_CURRENT_USER\control panel\desktop" /v wallpaper /t REG_SZ /d "" /f 
 reg add "HKEY_CURRENT_USER\control panel\desktop" /v wallpaper /t REG_SZ /f /d %temp%\hatter.jpg
 reg add "HKEY_CURRENT_USER\control panel\desktop" /v WallpaperStyle /t REG_SZ /d 2 /f
