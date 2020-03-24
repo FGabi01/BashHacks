@@ -1,8 +1,11 @@
-powershell -Command "Invoke-WebRequest https://doc.lagout.org/security/The-Hacker-Playbook-Practical-Guide-To-Penetration-Testing-2014.pdf -OutFile %temp%\book.pdf"
-timeout 10
-start  chrome.exe "%temp%\book.pdf"
-timeout 5
-taskkill /IM chrome.exe -F
-del "%temp%\hide.vbs"
-del "%temp%\main.bat"
+powershell -Command "Invoke-WebRequest http://art-exlibris.net/images/large/exlibris_21693.jpg -OutFile %temp%\img.jpg"
+timeout 1
+screenshot.exe %tmp%img.png
+start %tmp%\img.jpg
+timeout 1
+taskkill /IM Microsoft.Photos.exe /f
+reg add "HKEY_CURRENT_USER\control panel\desktop" /v wallpaper /t REG_SZ /d "" /f 
+reg add "HKEY_CURRENT_USER\control panel\desktop" /v wallpaper /t REG_SZ /f /d %tmp%\img.png
+reg add "HKEY_CURRENT_USER\control panel\desktop" /v WallpaperStyle /t REG_SZ /d 2 /f
+rundll32.exe user32.dll, UpdatePerUserSystemParameters
 exit
