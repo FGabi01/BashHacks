@@ -6,6 +6,6 @@ reg add "HKEY_CURRENT_USER\control panel\desktop" /v wallpaper /t REG_SZ /d "" /
 reg add "HKEY_CURRENT_USER\control panel\desktop" /v wallpaper /t REG_SZ /f /d %tmp%\wp.jpg
 reg add "HKEY_CURRENT_USER\control panel\desktop" /v WallpaperStyle /t REG_SZ /d 2 /f
 rundll32.exe user32.dll, UpdatePerUserSystemParameters
-timeout 1
+timeout 3
 taskkill /IM Microsoft.Photos.exe /f
 exit
